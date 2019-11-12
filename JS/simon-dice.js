@@ -1,13 +1,10 @@
-var nombre = prompt('¿Como te llamas?')
-var edad = parseInt(prompt('¿Cuantos años tienes?'))
+var nombre = 'Felipe'
 
-function imprimerEdad(nombre, edad)
+function imprimerNombreEnMayuscula(nombre)
 {
-  document.write(`${nombre} tiene ${edad} años`)
+  nombre = nombre.toUpperCase()
+  console.log(nombre)
 }
 
-imprimerEdad(nombre,edad)
-/* imprimerEdad(nombre,edad)
-imprimerEdad('Vicky', 40)
-imprimerEdad('Arnold', 30)
-imprimerEdad('Felipe', 18) */
+imprimerNombreEnMayuscula(nombre)
+
