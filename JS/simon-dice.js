@@ -1,27 +1,13 @@
-var edad = 27;
+var nombre = prompt('¿Como te llamas?')
+var edad = parseInt(prompt('¿Cuantos años tienes?'))
 
-/* edad = edad +1; */
-edad += 1;
+function imprimerEdad(nombre, edad)
+{
+  document.write(`${nombre} tiene ${edad} años`)
+}
 
-var peso = 75;
-
-/* peso = peso - 2; */
-peso-= 2
-
-var sandwich = 1
-
-peso += sandwich
-
-var jugarAlFutbol = 3
-
-peso -= jugarAlFutbol
-
-var precioDeVino = 200.3
-
-var total = Math.round(precioDeVino * 100 * 3) / 100
-var totalStr =total.toFixed(2)
-var total2 = parseFloat(totalStr)
-
-var pizza = 8
-var persona = 2
-var cantidadPorcionePersona = pizza / persona
+imprimerEdad(nombre,edad)
+/* imprimerEdad(nombre,edad)
+imprimerEdad('Vicky', 40)
+imprimerEdad('Arnold', 30)
+imprimerEdad('Felipe', 18) */
