@@ -31,3 +31,11 @@ function imprimirNombreYEdad(persona)
 
 imprimirNombreYEdad(caracteristicasFelipe)
 imprimirNombreYEdad(caracteristicasDario)
+
+
+function cumpleanos(persona){
+  return{
+    ...persona,
+    edad: persona.edad +1
+  }
+}
