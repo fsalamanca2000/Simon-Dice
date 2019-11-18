@@ -29,10 +29,11 @@ var vicky = {
   altura: 1.59
 }
 
+const esAlta = persona => persona.altura >= 1.8
+const esBaja = persona => persona.altura <= 1.7
 var personas = [felipe, alan, martin, dario, paula, vicky]
 
-for(var i=0; i <personas.length; i++)
-{
-  var persona = personas[i]
-  console.log(`${persona.nombre} mide ${persona.altura} mts`)
-}
+var personasAltas = personas.filter(esAlta)
+var personasBajas = personas.filter(esBaja)
+console.log(personasAltas)
+console.log(personasBajas)
