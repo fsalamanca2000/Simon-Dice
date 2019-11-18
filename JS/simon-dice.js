@@ -9,15 +9,21 @@ console.log(`Al inicio del año ${felipe.nombre} pesa ${felipe.peso}kg`)
 const VARIACION_PESO = 0.2
 const aumentoPeso = (persona) => persona.peso += VARIACION_PESO
 const adelgazar = persona => persona.peso -= VARIACION_PESO
-for (var i = 1; i <= 365; i++) 
+const META = felipe.peso -3
+const comeMucho = () => Math.random < 0.3
+const realizaDeporte = () => Math.random < 0.4
+var dias = 0
+while(felipe.peso > META)
 {
-  var random = Math.random()
-  if (random < 0.25){
+  if(comeMucho())
+  {
     aumentoPeso(felipe)
   }
-  else if(random <0.5){
+  if(realizaDeporte())
+  {
     adelgazar(felipe)
   }
+  dias += 1
 }
 
-console.log(`Al final del año ${felipe.nombre} pesa ${felipe.peso.toFixed(2)}kg`)
+console.log(`Tras ${dias} dias, ${felipe.nombre} adelgazo 3kg`)
