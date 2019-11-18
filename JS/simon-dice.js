@@ -1,29 +1,20 @@
-var felipe = {
-  nombre: 'Felipe',
-  apellido:'Salamanca',
-  edad: 18,
-  peso: 63
-}
+var contador = 0
 
-console.log(`Al inicio del año ${felipe.nombre} pesa ${felipe.peso}kg`)
-const VARIACION_PESO = 0.2
-const aumentoPeso = (persona) => persona.peso += VARIACION_PESO
-const adelgazar = persona => persona.peso -= VARIACION_PESO
-const META = felipe.peso -3
-const comeMucho = () => Math.random < 0.3
-const realizaDeporte = () => Math.random < 0.4
-var dias = 0
-while(felipe.peso > META)
+const llueve = () => Math.random() < 0.25
+
+do 
 {
-  if(comeMucho())
+  contador++
+} while(!llueve())
+function cantidad(){
+if(contador===1)
   {
-    aumentoPeso(felipe)
+    console.log(`Fui a ver si llovia ${contador} vez`)
   }
-  if(realizaDeporte())
+else
   {
-    adelgazar(felipe)
+  console.log(`Fui a ver si llovia ${contador} veces`)
   }
-  dias += 1
 }
 
-console.log(`Tras ${dias} dias, ${felipe.nombre} adelgazo 3kg`)
+cantidad()
