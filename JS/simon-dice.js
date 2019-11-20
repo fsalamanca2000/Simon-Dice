@@ -35,5 +35,12 @@ var personas = [felipe, alan, martin, dario, paula, vicky]
 
 var personasAltas = personas.filter(esAlta)
 var personasBajas = personas.filter(esBaja)
-console.log(personasAltas)
-console.log(personasBajas)
+
+const pasarAlturaCms = persona => ({
+  ...persona,
+  altura: personas.altura *100
+})
+
+
+var personasCms = personas.map(pasarAlturaCms)
+console.log(personasCms)
