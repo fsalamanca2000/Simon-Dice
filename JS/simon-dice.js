@@ -1,28 +1,24 @@
-function heredaDE(prototipoHijo, protitipoPadre){
-  var fn = function (){}
-  fn.prototype = protitipoPadre.prototype
-  prototipoHijo.prototype = new fn
-  prototipoHijo.prototype.constructor = prototipoHijo
+class Persona{
+  constructor(nombre, apellido, altura){
+    this.nombre = nombre
+    this.apellido = apellido
+    this.altura = altura
+  }
+    saludar() {
+      console.log(`Hola, me llamo ${this.nombre} ${this.apellido}`)
+    }
+    esAltoOBajo(){
+      return this.altura > 1.80
+    }
 }
-
-function Persona(nombre, apellido, altura){
-  this.nombre = nombre
-  this.apellido = apellido
-  this.altura = altura
+class Desarrollador extends Persona{
+  constructor(nombre, apellido,altura){
+    super(nombre, apellido, altura)
+  }
+  saludar(){
+    console.log(`Hola, me llamo ${this.nombre} ${this.apellido} y soy desarrollador`)
+  }
 }
-
-Persona.prototype.saludar = function (){
-  console.log(`Hola, me llamo ${this.nombre} ${this.apellido}`)
-}
-Persona.prototype.esAltoOBajo = function() {
-  return this.altura > 1.80
-}
-
-function Desarrollador(nombre, apellido){
-  this.nombre = nombre
-  this.apellido = apellido
-}
-heredaDE(Desarrollador, Persona)
 
 Desarrollador.prototype.saludar = function (){
   console.log(`Hola, me llamo ${this.nombre} ${this.apellido} y soy desarrollador`)
