@@ -1,31 +1,19 @@
-const API_URL ='https://swapi.co/api/'
-const PEOPLE_URL = 'people/:id'
-const opts = { crossDomain: true}
+const celeste = document.getElementById('celeste')
+      const violeta = document.getElementById('violeta')
+      const naranja = document.getElementById('naranja')
+      const verde = document.getElementById('verde')
+      const btnEmpezar = document.getElementById('btnEmpezar')
 
-function obtenerPersonaje(id){
-return new Promise((resolve,reject) =>{
+      class Juego {
+        constructor() {
+          this.inicializar()
+        }
 
-  const url = `${API_URL}${PEOPLE_URL.replace(':id', id)}`
-  $.get (url, opts, function(data){
-    resolve(data)
-  })
-  .fail(() => reject(id))
-  })
-}
+        inicializar() {
+          btnEmpezar.classList.add('hide')
+        }
+      }
 
-function onError(id){
-  console.log(`Sucedio un error al obtener el personaje ${id}`)
-}
-async function obtenerPersonajes(){
-  var ids = [1, 2, 3, 4, 5, 6, 7]
-  var promesas = ids.map(id => obtenerPersonaje(id))
-  try{
-    var characters = await Promise.all(promesas)
-    console.log(characters)
-  } catch(id){
-    onError(id)
-  }
-}
-
-obtenerPersonajes()
-
+      function empezarJuego() {
+        var juego = new Juego()
+      }
