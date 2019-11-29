@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background: #dedede;
+  background: #006ff9;
   display: flex;
   align-items: center;
   height: 100vh;
@@ -71,8 +71,11 @@ body {
   position: absolute;
   top: calc(50% - 50px);
   left: calc(50% - 200px);
+  font-size: 20px;
 }
-
 .hide {
   display: none;
+}
+* {
+  font-family: 'Josefin Sans', sans-serif;
 }
